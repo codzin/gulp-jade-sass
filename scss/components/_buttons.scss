@@ -1,0 +1,223 @@
+.btn,
+.btn:visited {
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-m;
+	line-height: 40px;
+	color: $color-white;
+	text-align: center;
+	text-decoration: none !important;
+	vertical-align: baseline;
+	background: $button-color-primary;
+	display: inline-block;
+	width: 100%;
+	height: 44px;
+	border: 2px solid $button-color-primary;
+	border-radius: $global-radius;
+	margin: 0 0 $spacing-m;
+	padding: 0 1.5em;
+	@include transition(all,.1s);
+}
+
+.btn:hover {
+	color: $color-white;
+	background: $button-color-primary-hover;
+	border-color: $button-color-primary-hover;
+}
+
+.btn:active {
+	color: $color-white;
+	background: $button-color-primary-hover;
+}
+
+.btn-disabled {
+	cursor: not-allowed !important;
+	opacity: .25;
+	pointer-events: none;
+}
+
+.btn-primary {
+	background: $button-color-primary;
+	border-color: $button-color-primary;
+
+	&:hover {
+		background: $button-color-primary-hover;
+		border-color: $button-color-primary-hover;
+	}
+
+	&:active {
+		background: $button-color-primary-hover;
+		border-color: $button-color-primary-hover;
+	}
+
+	&.btn-outline {
+		background: transparent !important;
+		color: $button-color-primary;
+
+		&:hover {
+			color: $button-color-primary-hover;
+		}
+
+		&:active {
+			color: $button-color-primary-hover;
+		}
+	}
+
+}
+
+.btn-secondary {
+	background: $button-color-secondary;
+	border-color: $button-color-secondary;
+
+	&:hover {
+		background: $button-color-secondary-hover;
+		border-color: $button-color-secondary-hover;
+	}
+
+	&:active {
+		background: $button-color-secondary-hover;
+		border-color: $button-color-secondary-hover;
+	}
+
+	&.btn-outline {
+		background: transparent !important;
+		color: $button-color-secondary;
+
+		&:hover {
+			color: $button-color-secondary-hover;
+		}
+
+		&:active {
+			color: $button-color-secondary-hover;
+		}
+	}
+
+}
+
+.btn-link {
+	background: transparent !important;
+	font-size: $font-size-m;
+	color: $link-color;
+	text-align: left;
+	width: auto;
+	border: 0 none;
+	padding: 0;
+}
+
+.btn-small {
+	font-size: $font-size-s;
+	line-height: 24px;
+	height: 28px;
+	padding: 0 1em;
+}
+
+.btn-big {
+	font-size: $font-size-l;
+	line-height: 56px;
+	height: 60px;
+	padding: 0 1.5em;
+}
+
+/* Firefox Fix */
+
+button::-moz-focus-inner,
+input[type=reset]::-moz-focus-inner,
+input[type=button]::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner,
+input[type=file] > input[type=button]::-moz-focus-inner {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+// Styles for viewport > 480 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-s) {
+
+	button,
+	.btn {
+	    width: auto;
+	}
+
+	.btn-group {
+		@include clearfix;
+	}
+
+	.btn-group .btn {
+		float: left;
+		border-radius: 0;
+
+		&:first-child {
+			border-radius: $global-radius 0 0 $global-radius;
+			border-left-width: 0;
+		}
+
+		&:last-child {
+			border-radius: 0 $global-radius $global-radius 0;
+			border-right-width: 0;
+		}
+
+		&-outline {
+			border-color: $button-color-primary;
+			border-width: 2px 1px !important;
+
+			&:first-child {
+				border-radius: $global-radius 0 0 $global-radius;
+				border-left-width: 2px !important;
+			}
+
+			&:last-child {
+				border-radius: 0 $global-radius $global-radius 0;
+				border-right-width: 2px !important;
+			}
+
+			&:hover {
+				background: $button-color-primary-hover !important;
+				border-color: $button-color-primary-hover !important;
+				color: $color-white;
+			}
+
+			&:active {
+				background: $button-color-primary-hover !important;
+				border-color: $button-color-primary-hover !important;
+				color: $color-white;
+			}
+		}
+	}
+
+}
+
+
+// Styles for viewport > 600 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-m) {
+}
+
+
+// Styles for viewport > 768 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-l) {
+}
+
+
+// Styles for viewport > 992 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-xl) {
+}
+
+
+// Styles for viewport > 1280 px --------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-xxl) {
+}
+
+
+// Styles for Retina / High DPI Styles --------------------------------------- //
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
+}
+
+// Print Styles -------------------------------------------------------------- //
+
+@media print {
+}

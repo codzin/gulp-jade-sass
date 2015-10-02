@@ -1,0 +1,223 @@
+form {
+	margin: 0 0 $spacing-m;
+}
+
+fieldset {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+
+fieldset > div {
+    font-size: 0;
+	margin-bottom: $spacing-m;
+}
+
+fieldset > div > input,
+fieldset > div > select,
+fieldset > div > textarea {
+	@include fontsize(m);
+}
+
+label {
+	cursor: pointer;
+}
+
+label,
+.label {
+	@include fontsize(m);
+	font-family: $font-family-sans-serif;
+	display: block;
+	margin-bottom: $spacing-xs;
+}
+
+label.checkbox,
+label.radio {
+	text-indent: -19px;
+	margin: 0;
+	padding-left: 21px;
+}
+
+.inputs {
+	width: 100%;
+}
+
+input,
+select,
+textarea {
+	font-weight: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
+	vertical-align: baseline;
+}
+
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=date],
+input[type=time],
+input[type=number],
+input[type=file],
+textarea {
+	background: #fff;
+	display :block;
+	width: 100%;
+	border: 1px solid $border-color;
+	margin: 0;
+	padding: $spacing-xs;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+input[type=file] {
+	background: transparent !important;
+	border: 0 none;
+	padding: 0;
+}
+
+select {
+	cursor: pointer;
+}
+
+textarea {
+	height: auto;
+	min-height: 100px;
+	vertical-align:top;
+}
+
+::-webkit-input-placeholder {
+	color: $text-color-light;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: $text-color-light;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $text-color-light;
+}
+
+:-ms-input-placeholder {
+	color: $text-color-light;
+}
+
+.helptext {
+	@include fontsize(s);
+	color: $text-color-light;
+    display: block;
+	margin-top: $spacing-xs;
+}
+
+/* Normalize Fix */
+
+input[type=search] {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* WebKit Fix */
+
+[placeholder]:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+
+// Styles for viewport > 480 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-s) {
+}
+
+
+// Styles for viewport > 600 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-m) {
+}
+
+
+// Styles for viewport > 768 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-l) {
+
+	label.autowidth {
+	    width: auto !important;
+	}
+
+	.flexform label,
+	.flexform .label {
+	    display: inline-block;
+	    width: 33.3334%;
+		padding-right: $spacing-m;
+	}
+
+	.inputs {
+	    display: inline-block;
+	    width: 66.6667%;
+	    vertical-align: top;
+	}
+
+	.flexform input[type=text],
+	.flexform input[type=password],
+	.flexform input[type=search],
+	.flexform input[type=email],
+	.flexform input[type=url],
+	.flexform input[type=tel],
+	.flexform input[type=date],
+	.flexform input[type=time],
+	.flexform input[type=number],
+	.flexform input[type=file],
+	.flexform textarea {
+	    display: inline-block;
+	    width: 66.6667%;
+	}
+
+	.flexform .helptext {
+	    margin-left: 33.3334%;
+	}
+
+	.flexform .inputs .helptext {
+	    margin-left: 0;
+	}
+
+	.flexform .btn,
+	.flexform .btn-group {
+	    margin-left: 33.3334%;
+	}
+
+	.flexform .btn-group .btn {
+	    margin-left: 0;
+	}
+
+}
+
+
+// Styles for viewport > 992 px ---------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-xl) {
+
+	.flexform label,
+	.flexform .label {
+		text-align: right;
+	}
+
+}
+
+
+// Styles for viewport > 1280 px --------------------------------------------- //
+
+@media only screen and (min-width: $screenwidth-xxl) {
+}
+
+// Styles for Retina / High DPI Styles --------------------------------------- //
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
+}
+
+// Print Styles -------------------------------------------------------------- //
+
+@media print {
+}
