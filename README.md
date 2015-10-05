@@ -8,7 +8,17 @@ Open Terminal
 
 Type <code> npm install </code>
 
-Then Type <code> gulp </code>
+Type <code> gulp </code>
+
+
+For LiveReload use Extension
+https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+
+check (Allow access to file URLs) for LiveReload extension
+
+Run gulp
+
+open html file 
 
 Have fun :)
 
