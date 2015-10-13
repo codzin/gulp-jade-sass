@@ -36,9 +36,7 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
   gulp.src('scss/**/*.scss')
   .pipe(plumber())
-  .pipe(sass({
-    outputStyle: 'compressed'
-    }))
+  .pipe(sass())
   .pipe(prefix('last 2 versions', '> 1%', 'ie 8', 'Android 2', 'Firefox ESR'))
   .pipe(gulp.dest('build/css'))
   .pipe(livereload());
