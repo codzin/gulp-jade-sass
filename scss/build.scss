@@ -47,7 +47,7 @@
 
 
 $susy: (
-  columns: 12, 
+  columns: 12,
   container: 1140px,
   gutters: 0.25,
   global-box-sizing: border-box,
@@ -67,7 +67,7 @@ $susy: (
   @include span(2);
   margin-left: span(6);
   @include breakpoint(20em) {
-    @include span(4); 
+    @include span(4);
     margin-left: span(3);
   }
 }
